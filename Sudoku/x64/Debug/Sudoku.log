@@ -1,2 +1,5 @@
 ﻿  grid.cpp
+  main.cpp
+  sudoku.cpp
+  Generating Code...
   Sudoku.vcxproj -> C:\Users\Admin\Documents\Dev work\game programming\Sudoku\x64\Debug\Sudoku.exe

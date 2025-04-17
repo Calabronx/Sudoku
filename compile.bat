@@ -1,1 +1,1 @@
-g++ main.cpp -o Sudoku.exe
+g++ *.cpp -o Sudoku.exe

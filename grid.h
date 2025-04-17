@@ -16,7 +16,7 @@ class Grid
 
 	private:
 		void initGrid();
-		// std::vector<vector<int>> solveGrid(std::vector<vector<int>> grid, );		
+		std::vector<std::vector<int>> solveGrid(std::vector<std::vector<int>> grid, int start, int end);		
 	public:
 		void printGrid();
 	private:

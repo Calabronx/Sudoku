@@ -15,7 +15,12 @@ int Sudoku::init()
 
 void Sudoku::run()
 {
+	bool exit = false;
 
+	while(!exit) //es infinito por ahora
+	{
+		std::cout << "running" << std::endl;
+	}
 }
 
 void Sudoku::update()
