@@ -6,21 +6,39 @@
  * 
  **/ 
 #include <vector>
+#include <unordered_set>
 
+enum Dificulty
+{
+	EASY = 1,
+	MEDIUM = 2,
+	HARD = 3,
+};
 
 class Grid
 {
 	public:
-		Grid();
+		Grid(int grid_dificulty);
 		~Grid();
 
 	private:
 		void initGrid();
-		std::vector<std::vector<int>> solveGrid(std::vector<std::vector<int>> grid, int start, int end);		
+		void generateGrid(std::vector<std::vector<int>>& grid);
+		void fillBox(std::vector<std::vector<int>>& grid, std::unordered_set<int>& check_nums, int row, int col);
+		bool solveSudokuRec(std::vector<std::vector<int>>& grid, int row, int col);
+		void solveSudoku(std::vector<std::vector<int>>& grid);
+		//definir metodo que elimine valores random de celdas (por cuadrado y que no los vacie)
+		void removeKCells(std::vector<std::vector<int>>& grid, int k);
+		void printGrid(std::vector<std::vector<int>> grid);
+
 	public:
+		bool isSafe(int row, int col, int num);
+		bool isCellEmpty(int row, int col);
+		void addNum(int row, int col, int num);
 		void printGrid();
 	private:
 		std::vector<std::vector<int>> m_grid; // 2d grid
+		int m_grid_dificulty;
 
 };
 

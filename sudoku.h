@@ -16,7 +16,7 @@ class Sudoku
 		void render();
 
 	private:
-		Grid m_game_grid;
+		Grid *m_game_grid;
 };
 
 #endif
