@@ -1,7 +1,6 @@
 #include "grid.h"
 
 #include <iostream>
-#include <unordered_set>
 #include <time.h>
 
 Grid::Grid(int grid_dificulty)

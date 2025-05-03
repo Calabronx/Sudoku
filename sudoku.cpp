@@ -26,6 +26,7 @@ int Sudoku::init()
 	std::cout << std::endl;
 
 	m_game_grid = new Grid(dificulty);
+
 	return 0;
 }
 
