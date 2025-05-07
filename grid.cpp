@@ -3,6 +3,10 @@
 #include <iostream>
 #include <time.h>
 
+#include <SDL2/SDL_ttf.h>
+
+#include "colors.h"
+
 Grid::Grid(int grid_dificulty)
 	: m_grid_dificulty(grid_dificulty)
 {
@@ -103,6 +107,28 @@ void Grid::printGrid()
 	}
 
 	std::cout << "9x9 grid initialized" << std::endl;
+}
+
+void Grid::drawGrid(SDL_Window* window, SDL_Renderer* renderer)
+{
+	SDL_SetRenderDrawColor(renderer, BARELY_BLACK.r, BARELY_BLACK.g, BARELY_BLACK.b, BARELY_BLACK.a);
+	SDL_RenderClear(renderer);
+
+	SDL_SetRenderDrawColor(renderer, DARK_GREY.r, DARK_GREY.g, DARK_GREY.b, DARK_GREY.a);
+
+	for (int x = 0; x < 1 + GRID_WIDTH * CELL_SIZE; x += CELL_SIZE)
+	{
+		SDL_RenderDrawLine(renderer, x, 0, x, SCREEN_HEIGHT);
+	}
+
+	for (int y = 0; y < 1 + GRID_HEIGHT * CELL_SIZE; y += CELL_SIZE)
+	{
+		SDL_RenderDrawLine(renderer, 0, y, SCREEN_WIDTH, y);
+	}
+
+	//SDL_SetRenderDrawColor(renderer, 
+	SDL_RenderPresent(renderer);
+
 }
 
 void Grid::printGrid(std::vector<std::vector<int>> grid)

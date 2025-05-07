@@ -1,2 +1,2 @@
-g++ *.cpp -o Sudoku.exe
+g++ *.cpp -I include -o Sudoku.exe
 .\Sudoku.exe

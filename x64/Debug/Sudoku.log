@@ -1,2 +1,5 @@
 ﻿  sudoku.cpp
+D:\GameProgramming\Sudoku\Sudoku\sudoku.cpp(44,6): warning C4101: 'row': unreferenced local variable
+D:\GameProgramming\Sudoku\Sudoku\sudoku.cpp(45,6): warning C4101: 'col': unreferenced local variable
+D:\GameProgramming\Sudoku\Sudoku\sudoku.cpp(46,6): warning C4101: 'num': unreferenced local variable
   Sudoku.vcxproj -> D:\GameProgramming\Sudoku\Sudoku\x64\Debug\Sudoku.exe

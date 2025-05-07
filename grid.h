@@ -5,8 +5,12 @@
  * width
  * 
  **/ 
+#include <SDL2/SDL.h>
+
 #include <vector>
 #include <unordered_set>
+
+#include "consts.h"
 
 enum Dificulty
 {
@@ -36,6 +40,7 @@ class Grid
 		bool isCellEmpty(int row, int col);
 		void addNum(int row, int col, int num);
 		void printGrid();
+		void drawGrid(SDL_Window* window, SDL_Renderer* renderer);
 	private:
 		std::vector<std::vector<int>> m_grid; // 2d grid
 		int m_grid_dificulty;
